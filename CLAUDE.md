@@ -70,6 +70,7 @@ Sudameris, Ibis, Tu Financiera, Sallustro, Caja Mutual de Cooperativistas del Pa
 - Animaciones: sin GSAP o con reduced-motion el contenido se muestra igual (clase `anim-fallback`, y timeout de seguridad de 4 s en el `<head>`).
 - Header: transparente sobre el hero, se compacta (84→64 px, fondo ink con blur) pasados 40 px, se oculta bajando y reaparece subiendo. Menú mobile < 1024 px, pantalla completa con focus trap y Escape.
 - Hero: slideshow de 3 fotos de campo (la 1ª precargada, las otras se cargan en `load`), split-text por líneas, badge Trane + specs. Entre 1024 y 1279 px los CTAs van debajo del texto para no chocar con el badge.
+- Cache-busting: `css/styles.css` y `js/*.js` llevan `?v=AAAAMMDDhhmm` en index.html; actualizarlo en cada push que toque CSS/JS (GitHub Pages cachea 10 min).
 - Preview local: `npx serve delta-montajes -l 5077` (config `delta-montajes` en ../.claude/launch.json).
 - Los `div` ancla vacíos al final de `<main>` son temporales: reemplazar al construir cada sección. Ya hay un footer oscuro básico (`#contacto`) para que la página no termine en blanco; el contacto completo con formulario va antes del footer.
 
