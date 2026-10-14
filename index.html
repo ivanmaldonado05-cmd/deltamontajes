@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#0b0d1f">
   <link rel="canonical" href="https://www.deltamontajes.com/">
 
-  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!d.classList.contains('hero-ready'))d.classList.add('anim-fallback')},4000)})(document.documentElement)</script>
+  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!d.classList.contains('hero-ready'))d.classList.add('anim-fallback')},2500)})(document.documentElement)</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -142,12 +142,40 @@
       </a>
     </section>
 
-    <!-- TEMP: espacio para probar el header compacto. Se reemplaza por las secciones siguientes. -->
-    <section id="servicios" class="tmp-next">
-      <div class="container"><p class="eyebrow">Próximas secciones</p></div>
-    </section>
-    <div id="obras"></div><div id="nosotros"></div><div id="proceso"></div><div id="trane"></div><div id="contacto"></div>
+    <!-- Anclas de las secciones que faltan construir (servicios, obras, nosotros, proceso, trane) -->
+    <div id="servicios"></div><div id="obras"></div><div id="nosotros"></div><div id="proceso"></div><div id="trane"></div>
   </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="contacto">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <img src="assets/img/brand/delta-logo-blanco-480.webp" width="480" height="135" alt="Delta Montajes S.R.L." loading="lazy">
+        <p>Ingeniería electromecánica en climatización, ventilación mecánica y refrigeración industrial. +30 años en todo Paraguay.</p>
+        <a class="btn btn--primary" href="mailto:delta@conexion.com.py?subject=Pedido%20de%20presupuesto">Pedir presupuesto</a>
+      </div>
+      <div>
+        <h2 class="site-footer__title mono">Contacto</h2>
+        <ul class="site-footer__list">
+          <li><a href="tel:+59521391204">+595 21 391-204/5</a></li>
+          <li><a href="mailto:delta@conexion.com.py">delta@conexion.com.py</a></li>
+          <li>14 de Mayo 842</li>
+          <li><a href="https://www.facebook.com/deltasrlmontajes" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="site-footer__title mono">Horario</h2>
+        <ul class="site-footer__list">
+          <li>Lun a Vie · 7:30–12:00 / 13:00–17:30</li>
+          <li>Sábados · 8:00–11:30</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container site-footer__bottom mono">
+      <span>© <span data-year>2026</span> Delta Montajes S.R.L.</span>
+      <span>Partner oficial Trane</span>
+    </div>
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>

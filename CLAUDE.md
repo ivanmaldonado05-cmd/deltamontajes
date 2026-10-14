@@ -71,7 +71,7 @@ Sudameris, Ibis, Tu Financiera, Sallustro, Caja Mutual de Cooperativistas del Pa
 - Header: transparente sobre el hero, se compacta (84→64 px, fondo ink con blur) pasados 40 px, se oculta bajando y reaparece subiendo. Menú mobile < 1024 px, pantalla completa con focus trap y Escape.
 - Hero: slideshow de 3 fotos de campo (la 1ª precargada, las otras se cargan en `load`), split-text por líneas, badge Trane + specs. Entre 1024 y 1279 px los CTAs van debajo del texto para no chocar con el badge.
 - Preview local: `npx serve delta-montajes -l 5077` (config `delta-montajes` en ../.claude/launch.json).
-- La sección `.tmp-next` y los `div` ancla vacíos en index.html son TEMPORALES: reemplazar al construir cada sección.
+- Los `div` ancla vacíos al final de `<main>` son temporales: reemplazar al construir cada sección. Ya hay un footer oscuro básico (`#contacto`) para que la página no termine en blanco; el contacto completo con formulario va antes del footer.
 
 ## Pendientes con el cliente
 - [ ] Número de WhatsApp (placeholder `595XXXXXXXXX`)

@@ -554,8 +554,32 @@ body.menu-open .site-header::before { opacity: 0; }
   html.js.anim-fallback .hero [data-split] { visibility: visible; }
 }
 
-/* TEMP: placeholder de las secciones siguientes */
-.tmp-next { min-height: 150vh; padding-block: 6rem; background: var(--paper); color: var(--slate); }
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer {
+  position: relative;
+  background: var(--ink);
+  color: rgba(255, 255, 255, .78);
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  padding-top: clamp(3.5rem, 8vw, 6rem);
+}
+.site-footer__grid { display: grid; gap: 2.5rem; padding-bottom: 3rem; }
+.site-footer__brand { display: grid; gap: 1.25rem; justify-items: start; max-width: 38ch; }
+.site-footer__brand img { width: 160px; }
+.site-footer__title { color: var(--air); margin-bottom: 1rem; font-weight: 500; }
+.site-footer__list { display: grid; gap: .5rem; font-size: var(--fs-sm); }
+.site-footer__list a { transition: color .3s; }
+.site-footer__list a:hover { color: var(--white); }
+.site-footer__bottom {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem;
+  padding-block: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  color: rgba(255, 255, 255, .5);
+}
+@media (min-width: 768px) {
+  .site-footer__grid { grid-template-columns: 1.4fr 1fr 1fr; }
+}
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
