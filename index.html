@@ -7,6 +7,19 @@
   <meta name="description" content="Ingeniería electromecánica con más de 30 años en Paraguay: instalación, mantenimiento y reparación de aire acondicionado, sistemas VRF, chillers y ventilación mecánica. Partner oficial Trane.">
   <meta name="theme-color" content="#0b0d1f">
   <link rel="canonical" href="https://www.deltamontajes.com/">
+  <link rel="icon" href="assets/img/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PY">
+  <meta property="og:site_name" content="Delta Montajes">
+  <meta property="og:title" content="Delta Montajes · Ingeniería en climatización">
+  <meta property="og:description" content="Instalación, mantenimiento y reparación de aire acondicionado, VRF, agua fría y ventilación mecánica en todo Paraguay. +30 años. Partner oficial Trane.">
+  <meta property="og:url" content="https://www.deltamontajes.com/">
+  <meta property="og:image" content="https://www.deltamontajes.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 
   <script>(function(d){d.classList.add('js');setTimeout(function(){if(!d.classList.contains('hero-ready'))d.classList.add('anim-fallback')},2500)})(document.documentElement)</script>
 
@@ -18,10 +31,51 @@
         imagesrcset="assets/img/equipo/montaje-chillers-grua-640.webp 640w, assets/img/equipo/montaje-chillers-grua-1280.webp 1280w"
         imagesizes="100vw" fetchpriority="high">
 
-  <link rel="stylesheet" href="css/styles.css?v=202610141705">
+  <link rel="stylesheet" href="css/styles.css?v=202610142031">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HVACBusiness",
+    "name": "Delta Montajes S.R.L.",
+    "description": "Ingeniería electromecánica: instalación, mantenimiento y reparación de aire acondicionado, ventilación mecánica y refrigeración industrial. Representante oficial Trane.",
+    "url": "https://www.deltamontajes.com/",
+    "logo": "https://www.deltamontajes.com/assets/img/brand/delta-logo-color.png",
+    "image": "https://www.deltamontajes.com/assets/img/og-image.jpg",
+    "telephone": "+595-21-391204",
+    "email": "delta@conexion.com.py",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "14 de Mayo 842",
+      "addressLocality": "Asunción",
+      "addressCountry": "PY"
+    },
+    "areaServed": { "@type": "Country", "name": "Paraguay" },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:30", "closes": "12:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "13:00", "closes": "17:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "11:30" }
+    ],
+    "sameAs": ["https://www.facebook.com/deltasrlmontajes"]
+  }
+  </script>
+
+  <!-- GA4: reemplazar G-XXXXXXXXXX por el ID real [PENDIENTE]. No carga nada mientras sea el placeholder. -->
+  <script>
+    (function () {
+      var GA_ID = 'G-XXXXXXXXXX';
+      if (/X{6}/.test(GA_ID)) return;
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID; document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag('js', new Date()); gtag('config', GA_ID);
+    })();
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div class="page-veil" aria-hidden="true"></div>
 
   <!-- ============ HEADER ============ -->
   <header class="site-header" id="top">
@@ -118,7 +172,7 @@
               <span class="btn__label">Pedir presupuesto</span>
               <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-            <a class="btn btn--ghost btn--lg" href="obras.html" data-magnetic>
+            <a class="btn btn--ghost btn--lg" href="#obras" data-magnetic>
               <span class="btn__label">Ver obras</span>
             </a>
           </div>
@@ -137,50 +191,656 @@
         </dl>
       </aside>
 
-      <a class="hero__scroll mono" href="#servicios" data-hero="fade">
+      <a class="hero__scroll mono" href="#cifras" data-hero="fade">
         <span class="hero__scroll-line" aria-hidden="true"></span>Scroll
       </a>
     </section>
 
-    <!-- Anclas de las secciones que faltan construir (servicios, obras, nosotros, proceso, trane) -->
-    <div id="servicios"></div><div id="obras"></div><div id="nosotros"></div><div id="proceso"></div><div id="trane"></div>
+    <!-- ============ CIFRAS ============ -->
+    <section class="stats" id="cifras" aria-label="Delta en cifras">
+      <div class="container">
+        <dl class="stats__grid">
+          <div class="stat" data-reveal>
+            <dt class="stat__label mono">Años de experiencia</dt>
+            <dd class="stat__value"><span class="stat__prefix">+</span><span data-count="30">30</span></dd>
+            <dd class="stat__note">En el mercado paraguayo desde los 90</dd>
+          </div>
+          <div class="stat" data-reveal>
+            <dt class="stat__label mono">Obras de gran escala</dt>
+            <dd class="stat__value"><span class="stat__prefix">+</span><span data-count="20">20</span></dd>
+            <dd class="stat__note">Corporativas, hoteleras, públicas y residenciales</dd>
+          </div>
+          <div class="stat" data-reveal>
+            <dt class="stat__label mono">Clientes corporativos</dt>
+            <dd class="stat__value"><span class="stat__prefix">+</span><span data-count="20">20</span></dd>
+            <dd class="stat__note">Bancos, constructoras, hoteles e instituciones</dd>
+          </div>
+          <div class="stat" data-reveal>
+            <dt class="stat__label mono">Departamentos</dt>
+            <dd class="stat__value"><span data-count="17">17</span></dd>
+            <dd class="stat__note">Cobertura nacional, de Asunción al interior</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ CLIENTES ============ -->
+    <section class="clients" aria-labelledby="clients-title">
+      <div class="container clients__head">
+        <p class="section-index mono" data-reveal><span>—</span> Clientes</p>
+        <h2 class="clients__title" id="clients-title" data-reveal>Empresas e instituciones que confían en Delta</h2>
+      </div>
+      <div class="marquee">
+        <div class="marquee__track">
+          <ul class="marquee__group">
+            <li class="logo-tile"><img src="assets/logos/sudameris.webp" width="571" height="188" alt="Sudameris Bank" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/ibis.webp" width="600" height="600" alt="Hotel Ibis" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/tu-financiera.webp" width="600" height="353" alt="Tu Financiera" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/sallustro.webp" width="600" height="400" alt="Sallustro" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/caja-mutual.webp" width="600" height="190" alt="Caja Mutual de Cooperativistas del Paraguay" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/ips.webp" width="600" height="600" alt="IPS — Instituto de Previsión Social" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/toyotoshi.webp" width="420" height="114" alt="Toyotoshi S.A." loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/grupo-vierci.webp" width="304" height="166" alt="Grupo A.J. Vierci" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/envaco.webp" width="600" height="565" alt="Envaco" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/atlas-grupo-editorial.webp" width="600" height="606" alt="Atlas Grupo Editorial" loading="lazy" decoding="async"></li>
+          </ul>
+          <ul class="marquee__group" aria-hidden="true">
+            <li class="logo-tile"><img src="assets/logos/sudameris.webp" width="571" height="188" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/ibis.webp" width="600" height="600" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/tu-financiera.webp" width="600" height="353" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/sallustro.webp" width="600" height="400" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/caja-mutual.webp" width="600" height="190" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/ips.webp" width="600" height="600" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/toyotoshi.webp" width="420" height="114" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/grupo-vierci.webp" width="304" height="166" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/envaco.webp" width="600" height="565" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/atlas-grupo-editorial.webp" width="600" height="606" alt="" loading="lazy" decoding="async"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="marquee marquee--reverse">
+        <div class="marquee__track">
+          <ul class="marquee__group">
+            <li class="logo-tile"><img src="assets/logos/tecnoedil.webp" width="526" height="96" alt="Tecnoedil S.A. Constructora" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/benitez-bittar.webp" width="500" height="330" alt="Benítez Bittar Constructora" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/agb-constructora.webp" width="299" height="169" alt="AGB Constructora" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/tosa.webp" width="600" height="300" alt="TOSA Terminal Occidental S.A." loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/tecinci.webp" width="600" height="193" alt="Tecinci Construcciones Civiles" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/implenia.webp" width="225" height="225" alt="Implenia Constructora" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/alsina-wood.webp" width="389" height="389" alt="Alsina & Wood Asociados Constructora" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/s3-constructora.webp" width="278" height="182" alt="S3 Constructora" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/quadra.webp" width="600" height="600" alt="Quadra Constructora" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/punto-a-punto.webp" width="600" height="361" alt="Punto a Punto S.R.L." loading="lazy" decoding="async"></li>
+          </ul>
+          <ul class="marquee__group" aria-hidden="true">
+            <li class="logo-tile"><img src="assets/logos/tecnoedil.webp" width="526" height="96" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/benitez-bittar.webp" width="500" height="330" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/agb-constructora.webp" width="299" height="169" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/tosa.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/tecinci.webp" width="600" height="193" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/implenia.webp" width="225" height="225" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/alsina-wood.webp" width="389" height="389" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/s3-constructora.webp" width="278" height="182" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/quadra.webp" width="600" height="600" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/logos/punto-a-punto.webp" width="600" height="361" alt="" loading="lazy" decoding="async"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="services section" id="servicios" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-index mono" data-reveal><span>01</span> Servicios</p>
+          <h2 class="section-title" id="services-title" data-reveal>Climatización de punta a punta: <em>del plano a la puesta en marcha.</em></h2>
+          <p class="section-lead" data-reveal>Soluciones integrales para empresas e industrias, con repuestos originales y marcas reconocidas. Un solo equipo responsable del sistema durante toda su vida útil.</p>
+        </header>
+
+        <div class="service-cards">
+          <article class="service-card" data-reveal>
+            <div class="service-card__top">
+              <span class="mono service-card__num">01</span>
+              <svg class="service-card__icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="9" width="38" height="24" rx="2"/><circle cx="31" cy="21" r="7"/><path d="M31 14v14M24 21h14M10 15h10M10 20h10M10 25h6"/><path d="M9 38c4-2 8 2 12 0s8 2 12 0 6 1 6 1"/></svg>
+            </div>
+            <h3 class="service-card__title">Instalación</h3>
+            <p>Proyecto, provisión y montaje de sistemas de climatización y ventilación para edificios corporativos, hoteles, industrias y obras públicas.</p>
+            <ul class="service-card__list mono">
+              <li>VRF y sistemas split</li>
+              <li>Agua fría · chillers</li>
+              <li>Conductos y ventilación</li>
+            </ul>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="service-card__top">
+              <span class="mono service-card__num">02</span>
+              <svg class="service-card__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 32a16 16 0 1 1 32 0"/><path d="M24 32l8-10"/><circle cx="24" cy="32" r="2.5"/><path d="M12 32h3M33 32h3M24 16v3M14.7 21.5l2.2 2M33.3 21.5l-2.2 2"/><path d="M8 40h32"/></svg>
+            </div>
+            <h3 class="service-card__title">Mantenimiento</h3>
+            <p>Servicio técnico integral de todas las marcas, con planes de mantenimiento preventivo y correctivo que cuidan la eficiencia y la vida útil de cada equipo.</p>
+            <ul class="service-card__list mono">
+              <li>Planes preventivos a medida</li>
+              <li>Correctivo · todas las marcas</li>
+              <li>Repuestos originales</li>
+            </ul>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="service-card__top">
+              <span class="mono service-card__num">03</span>
+              <svg class="service-card__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M29.5 9.5a8 8 0 0 0-9.9 10.3L8.5 30.9a3.5 3.5 0 0 0 5 5l11.1-11.1a8 8 0 0 0 10.3-9.9l-4.7 4.7-4.6-1-1-4.6z"/><path d="M34 32h8M34 37h5M36 27h6"/></svg>
+            </div>
+            <h3 class="service-card__title">Reparación</h3>
+            <p>Técnicos nacionales e internacionales capacitados en todo el país para darte soporte y soluciones rápidas y confiables cuando el sistema no puede esperar.</p>
+            <ul class="service-card__list mono">
+              <li>Diagnóstico técnico</li>
+              <li>Respuesta en todo el país</li>
+              <li>Soporte de marca Trane</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Equipos -->
+        <div class="equipment" id="equipos">
+          <div class="equipment__head">
+            <h3 class="equipment__title" data-reveal>Equipos y sistemas</h3>
+            <div class="tabs" role="tablist" aria-label="Categorías de equipos" data-reveal>
+              <button class="tab" role="tab" id="tab-clima" aria-controls="panel-clima" aria-selected="true">Climatización <span class="mono">07</span></button>
+              <button class="tab" role="tab" id="tab-agua" aria-controls="panel-agua" aria-selected="false" tabindex="-1">Agua fría <span class="mono">04</span></button>
+              <button class="tab" role="tab" id="tab-vent" aria-controls="panel-vent" aria-selected="false" tabindex="-1">Ventilación y conductos <span class="mono">06</span></button>
+            </div>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="panel-clima" aria-labelledby="tab-clima">
+            <ul class="equip-grid">
+              <li class="equip-card">
+                <div class="equip-card__media"><img src="assets/img/equipos/split-pared-458.webp" width="458" height="190" alt="Split pared On/Off" loading="lazy" decoding="async"></div>
+                <span class="equip-card__code mono">CL-01</span>
+                <h4 class="equip-card__title">Split pared On/Off</h4>
+                <p>Confort individual para oficinas y ambientes medianos.</p>
+              </li>
+              <li class="equip-card">
+                <div class="equip-card__media"><img src="assets/img/equipos/cassette-428.webp" width="428" height="339" alt="Cassette" loading="lazy" decoding="async"></div>
+                <span class="equip-card__code mono">CL-02</span>
+                <h4 class="equip-card__title">Cassette</h4>
+                <p>Distribución de aire en 4 vías, embutido en el cielorraso.</p>
+              </li>
+              <li class="equip-card">
+                <div class="equip-card__media"><img src="assets/img/equipos/piso-techo-411.webp" width="411" height="326" alt="Piso techo" loading="lazy" decoding="async"></div>
+                <span class="equip-card__code mono">CL-03</span>
+                <h4 class="equip-card__title">Piso techo</h4>
+                <p>Montaje flexible en techo o pared para ambientes amplios.</p>
+              </li>
+              <li class="equip-card">
+                <div class="equip-card__media"><img src="assets/img/equipos/baja-silueta-426.webp" width="426" height="336" alt="Baja silueta" loading="lazy" decoding="async"></div>
+                <span class="equip-card__code mono">CL-04</span>
+                <h4 class="equip-card__title">Baja silueta</h4>
+                <p>Unidad oculta por ducto: el aire llega por rejillas, sin equipos a la vista.</p>
+              </li>
+              <li class="equip-card">
+                <div class="equip-card__media"><img src="assets/img/equipos/multisplit-480.webp" width="480" height="399" alt="Multisplit" loading="lazy" decoding="async"></div>
+                <span class="equip-card__code mono">CL-05</span>
+                <h4 class="equip-card__title">Multisplit</h4>
+                <p>Una sola unidad exterior para varios ambientes interiores.</p>
+              </li>
+              <li class="equip-card">
+                <div class="equip-card__media"><img src="assets/img/equipos/vrf-480.webp" width="480" height="239" alt="Sistema VRF" loading="lazy" decoding="async"></div>
+                <span class="equip-card__code mono">CL-06</span>
+                <h4 class="equip-card__title">Sistema VRF</h4>
+                <p>Caudal de refrigerante variable para edificios con muchas zonas.</p>
+              </li>
+              <li class="equip-card">
+                <div class="equip-card__media"><img src="assets/img/equipos/rooftop-480.webp" width="480" height="341" alt="Rooftop" loading="lazy" decoding="async"></div>
+                <span class="equip-card__code mono">CL-07</span>
+                <h4 class="equip-card__title">Rooftop</h4>
+                <p>Equipo compacto en azotea para grandes superficies.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="panel-agua" aria-labelledby="tab-agua" hidden>
+            <ul class="equip-grid">
+              <li class="equip-card">
+                <div class="equip-card__media"><img src="assets/img/equipos/chiller-tornillo-468.webp" width="468" height="311" alt="Chiller tornillo" loading="lazy" decoding="async"></div>
+                <span class="equip-card__code mono">AF-01</span>
+                <h4 class="equip-card__title">Chiller tornillo</h4>
+                <p>Alta capacidad para edificios de gran porte y procesos industriales.</p>
+              </li>
+              <li class="equip-card">
+                <div class="equip-card__media"><img src="assets/img/equipos/chiller-scroll-480.webp" width="480" height="334" alt="Chiller scroll" loading="lazy" decoding="async"></div>
+                <span class="equip-card__code mono">AF-02</span>
+                <h4 class="equip-card__title">Chiller scroll</h4>
+                <p>Eficiencia en cargas medias, con compresores escalonados.</p>
+              </li>
+              <li class="equip-card">
+                <div class="equip-card__media"><img src="assets/img/equipos/chiller-modular-480.webp" width="480" height="372" alt="Chiller modular" loading="lazy" decoding="async"></div>
+                <span class="equip-card__code mono">AF-03</span>
+                <h4 class="equip-card__title">Chiller modular</h4>
+                <p>Capacidad que crece por módulos según la demanda.</p>
+              </li>
+              <li class="equip-card">
+                <div class="equip-card__media"><img src="assets/img/equipos/manejadoras-345.webp" width="345" height="229" alt="Manejadoras" loading="lazy" decoding="async"></div>
+                <span class="equip-card__code mono">AF-04</span>
+                <h4 class="equip-card__title">Manejadoras</h4>
+                <p>Unidades de tratamiento de aire conectadas a la planta de agua fría.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="panel-vent" aria-labelledby="tab-vent" hidden>
+            <ul class="equip-grid">
+              <li class="equip-card">
+                <div class="equip-card__media"><img src="assets/img/equipos/conductos-chapa-galvanizada-480.webp" width="480" height="191" alt="Conductos de chapa galvanizada" loading="lazy" decoding="async"></div>
+                <span class="equip-card__code mono">VC-01</span>
+                <h4 class="equip-card__title">Conductos de chapa galvanizada</h4>
+                <p>Fabricación y montaje de redes de conductos a medida.</p>
+              </li>
+              <li class="equip-card">
+                <div class="equip-card__media"><img src="assets/img/equipos/conductos-alupir-480.webp" width="480" height="526" alt="Conductos de placas Alupir" loading="lazy" decoding="async"></div>
+                <span class="equip-card__code mono">VC-02</span>
+                <h4 class="equip-card__title">Conductos de placas Alupir</h4>
+                <p>Paneles preaislados: livianos, herméticos y de montaje rápido.</p>
+              </li>
+              <li class="equip-card">
+                <div class="equip-card__media"><img src="assets/img/equipos/conducto-textil-480.webp" width="480" height="288" alt="Conducto textil" loading="lazy" decoding="async"></div>
+                <span class="equip-card__code mono">VC-03</span>
+                <h4 class="equip-card__title">Conducto textil</h4>
+                <p>Difusión homogénea del aire en naves y grandes volúmenes.</p>
+              </li>
+              <li class="equip-card">
+                <div class="equip-card__media"><img src="assets/img/equipos/rejas-trox-480.webp" width="480" height="320" alt="Rejas Trox" loading="lazy" decoding="async"></div>
+                <span class="equip-card__code mono">VC-04</span>
+                <h4 class="equip-card__title">Rejas Trox</h4>
+                <p>Rejas, difusores y dampers Trox para la terminal de aire.</p>
+              </li>
+              <li class="equip-card">
+                <div class="equip-card__media"><img src="assets/img/equipos/ventiladores-centrifugos-480.webp" width="480" height="719" alt="Ventiladores centrífugos" loading="lazy" decoding="async"></div>
+                <span class="equip-card__code mono">VC-05</span>
+                <h4 class="equip-card__title">Ventiladores centrífugos</h4>
+                <p>Extracción e inyección con alta presión disponible.</p>
+              </li>
+              <li class="equip-card">
+                <div class="equip-card__media"><img src="assets/img/equipos/ventiladores-axiales-480.webp" width="480" height="720" alt="Ventiladores axiales" loading="lazy" decoding="async"></div>
+                <span class="equip-card__code mono">VC-06</span>
+                <h4 class="equip-card__title">Ventiladores axiales</h4>
+                <p>Grandes caudales de aire para ventilación general.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OBRAS DESTACADAS ============ -->
+    <section class="works" id="obras" aria-labelledby="works-title">
+      <div class="works__pin">
+        <div class="container works__head">
+          <div>
+            <p class="section-index mono"><span>02</span> Obras destacadas</p>
+            <h2 class="section-title" id="works-title">Edificios que funcionan <em>gracias a lo que no se ve.</em></h2>
+          </div>
+          <div class="works__meta">
+            <p class="works__lead">Agua fría, VRF y split en sedes corporativas, hoteles y edificios públicos de todo el país.</p>
+            <a class="btn btn--ghost" href="obras.html" data-magnetic><span class="btn__label">Ver todas las obras</span><svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="works__viewport">
+          <ul class="works__track">
+            <li class="work-card">
+              <a class="work-card__link" href="obras.html#toyotoshi">
+                <figure class="work-card__media"><img src="assets/img/obras/toyotoshi-640.webp" srcset="assets/img/obras/toyotoshi-640.webp 640w, assets/img/obras/toyotoshi-1080.webp 1080w" sizes="(min-width: 1024px) 42vw, 86vw" width="1080" height="704" alt="Edificio Toyotoshi S.A., Asunción" loading="lazy" decoding="async"></figure>
+                <div class="work-card__info">
+                  <span class="work-card__idx mono">01 / 08</span>
+                  <span class="work-card__sys mono">Agua fría + Sistema VRF</span>
+                  <h3 class="work-card__title">Edificio Toyotoshi S.A.</h3>
+                  <p class="work-card__loc mono">Asunción · Corporativo</p>
+                </div>
+              </a>
+            </li>
+            <li class="work-card">
+              <a class="work-card__link" href="obras.html#palacio-justicia-cde">
+                <figure class="work-card__media"><img src="assets/img/obras/palacio-justicia-cde-640.webp" srcset="assets/img/obras/palacio-justicia-cde-640.webp 640w, assets/img/obras/palacio-justicia-cde-960.webp 960w" sizes="(min-width: 1024px) 42vw, 86vw" width="960" height="641" alt="Palacio de Justicia CDE, Ciudad del Este" loading="lazy" decoding="async"></figure>
+                <div class="work-card__info">
+                  <span class="work-card__idx mono">02 / 08</span>
+                  <span class="work-card__sys mono">Agua fría</span>
+                  <h3 class="work-card__title">Palacio de Justicia CDE</h3>
+                  <p class="work-card__loc mono">Ciudad del Este · Edificio público</p>
+                </div>
+              </a>
+            </li>
+            <li class="work-card">
+              <a class="work-card__link" href="obras.html#edificio-dot">
+                <figure class="work-card__media"><img src="assets/img/obras/edificio-dot-640.webp" srcset="assets/img/obras/edificio-dot-640.webp 640w, assets/img/obras/edificio-dot-1280.webp 1280w, assets/img/obras/edificio-dot-1600.webp 1600w" sizes="(min-width: 1024px) 42vw, 86vw" width="1600" height="1600" alt="Edificio DOT, Asunción" loading="lazy" decoding="async"></figure>
+                <div class="work-card__info">
+                  <span class="work-card__idx mono">03 / 08</span>
+                  <span class="work-card__sys mono">Sistema VRF</span>
+                  <h3 class="work-card__title">Edificio DOT</h3>
+                  <p class="work-card__loc mono">Asunción · Corporativo</p>
+                </div>
+              </a>
+            </li>
+            <li class="work-card">
+              <a class="work-card__link" href="obras.html#dazzler">
+                <figure class="work-card__media"><img src="assets/img/obras/dazzler-640.webp" srcset="assets/img/obras/dazzler-640.webp 640w, assets/img/obras/dazzler-900.webp 900w" sizes="(min-width: 1024px) 42vw, 86vw" width="900" height="500" alt="Hotel Dazzler, Asunción" loading="lazy" decoding="async"></figure>
+                <div class="work-card__info">
+                  <span class="work-card__idx mono">04 / 08</span>
+                  <span class="work-card__sys mono">Sistema VRF</span>
+                  <h3 class="work-card__title">Hotel Dazzler</h3>
+                  <p class="work-card__loc mono">Asunción · Hotel</p>
+                </div>
+              </a>
+            </li>
+            <li class="work-card">
+              <a class="work-card__link" href="obras.html#hotel-ibis">
+                <figure class="work-card__media"><img src="assets/img/obras/hotel-ibis-640.webp" srcset="assets/img/obras/hotel-ibis-640.webp 640w, assets/img/obras/hotel-ibis-1280.webp 1280w, assets/img/obras/hotel-ibis-1600.webp 1600w" sizes="(min-width: 1024px) 42vw, 86vw" width="1600" height="1211" alt="Hotel Ibis, Asunción" loading="lazy" decoding="async"></figure>
+                <div class="work-card__info">
+                  <span class="work-card__idx mono">05 / 08</span>
+                  <span class="work-card__sys mono">Agua fría</span>
+                  <h3 class="work-card__title">Hotel Ibis</h3>
+                  <p class="work-card__loc mono">Asunción · Hotel</p>
+                </div>
+              </a>
+            </li>
+            <li class="work-card">
+              <a class="work-card__link" href="obras.html#edificio-mades">
+                <figure class="work-card__media"><img src="assets/img/obras/edificio-mades-640.webp" srcset="assets/img/obras/edificio-mades-640.webp 640w, assets/img/obras/edificio-mades-1016.webp 1016w" sizes="(min-width: 1024px) 42vw, 86vw" width="1016" height="677" alt="Edificio MADES, Asunción" loading="lazy" decoding="async"></figure>
+                <div class="work-card__info">
+                  <span class="work-card__idx mono">06 / 08</span>
+                  <span class="work-card__sys mono">Agua fría</span>
+                  <h3 class="work-card__title">Edificio MADES</h3>
+                  <p class="work-card__loc mono">Asunción · Edificio público</p>
+                </div>
+              </a>
+            </li>
+            <li class="work-card">
+              <a class="work-card__link" href="obras.html#palacio-justicia-caazapa">
+                <figure class="work-card__media"><img src="assets/img/obras/palacio-justicia-caazapa-640.webp" srcset="assets/img/obras/palacio-justicia-caazapa-640.webp 640w, assets/img/obras/palacio-justicia-caazapa-1280.webp 1280w, assets/img/obras/palacio-justicia-caazapa-1600.webp 1600w" sizes="(min-width: 1024px) 42vw, 86vw" width="1600" height="1352" alt="Palacio de Justicia Caazapá, Caazapá" loading="lazy" decoding="async"></figure>
+                <div class="work-card__info">
+                  <span class="work-card__idx mono">07 / 08</span>
+                  <span class="work-card__sys mono">Agua fría</span>
+                  <h3 class="work-card__title">Palacio de Justicia Caazapá</h3>
+                  <p class="work-card__loc mono">Caazapá · Edificio público</p>
+                </div>
+              </a>
+            </li>
+            <li class="work-card">
+              <a class="work-card__link" href="obras.html#corporativo-tocsa">
+                <figure class="work-card__media"><img src="assets/img/obras/corporativo-tocsa-640.webp" srcset="assets/img/obras/corporativo-tocsa-640.webp 640w, assets/img/obras/corporativo-tocsa-1030.webp 1030w" sizes="(min-width: 1024px) 42vw, 86vw" width="1030" height="579" alt="Edificio Corporativo TOCSA, Paraguay" loading="lazy" decoding="async"></figure>
+                <div class="work-card__info">
+                  <span class="work-card__idx mono">08 / 08</span>
+                  <span class="work-card__sys mono">Sistema VRF</span>
+                  <h3 class="work-card__title">Edificio Corporativo TOCSA</h3>
+                  <p class="work-card__loc mono">Paraguay · Corporativo</p>
+                </div>
+              </a>
+            </li>
+            <li class="work-card work-card--more">
+              <a href="obras.html">
+                <span class="mono">+12 obras</span>
+                <span class="work-card__more-title">Ver el portfolio completo</span>
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="container works__progress" aria-hidden="true"><span></span></div>
+      </div>
+    </section>
+
+    <!-- ============ TRANE ============ -->
+    <section class="trane section" id="trane" aria-labelledby="trane-title">
+      <div class="container trane__grid">
+        <div class="trane__media" data-reveal>
+          <img src="assets/img/equipo/visita-trane-960.webp" srcset="assets/img/equipo/visita-trane-640.webp 640w, assets/img/equipo/visita-trane-960.webp 960w" sizes="(min-width: 1024px) 45vw, 100vw" width="960" height="720" loading="lazy" alt="Equipo de Delta Montajes durante una visita técnica a instalaciones de Trane" data-parallax>
+          <div class="trane__logo-card">
+            <img src="assets/img/brand/trane-logo-320.webp" width="320" height="107" alt="Trane" loading="lazy">
+          </div>
+        </div>
+        <div class="trane__body">
+          <p class="section-index mono" data-reveal><span>03</span> Partner oficial</p>
+          <h2 class="section-title" id="trane-title" data-reveal>Representantes de <em>Trane</em> en Paraguay.</h2>
+          <p class="trane__text" data-reveal>Trabajamos con la línea completa de Trane, una de las marcas líderes del mundo en climatización comercial e industrial, y distribuimos otras marcas reconocidas. Eso significa equipos originales, repuestos originales y el respaldo técnico de fábrica en cada proyecto.</p>
+          <ul class="trane__points" data-reveal>
+            <li><span class="mono">01</span>Chillers, VRF, rooftops y manejadoras Trane</li>
+            <li><span class="mono">02</span>Repuestos originales con garantía</li>
+            <li><span class="mono">03</span>Especificación técnica y comercial de cada equipo</li>
+          </ul>
+          <a class="btn btn--primary" href="#contacto" data-magnetic data-reveal><span class="btn__label">Consultar por equipos Trane</span><svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ POR QUÉ DELTA ============ -->
+    <section class="why section" id="nosotros" aria-labelledby="why-title">
+      <div class="container why__grid">
+        <div class="why__intro">
+          <p class="section-index mono" data-reveal><span>04</span> Por qué Delta</p>
+          <h2 class="section-title" id="why-title" data-reveal>Ingeniería nacional, <em>experiencia internacional.</em></h2>
+          <p class="section-lead" data-reveal>Somos una empresa de ingeniería electromecánica formada por capital, profesionales y técnicos nacionales e internacionales. Nuestra misión es garantizar calidad y satisfacción en cada proyecto, con servicios técnicos integrales, soluciones personalizadas y repuestos originales.</p>
+          <figure class="why__photo" data-reveal>
+            <img src="assets/img/equipo/equipo-tecnico-azotea-960.webp" srcset="assets/img/equipo/equipo-tecnico-azotea-640.webp 640w, assets/img/equipo/equipo-tecnico-azotea-960.webp 960w" sizes="(min-width: 1024px) 40vw, 100vw" width="960" height="1280" loading="lazy" alt="Técnicos de Delta Montajes con equipo de seguridad en la azotea de una obra" data-parallax>
+            <figcaption class="mono">Equipo técnico en obra</figcaption>
+          </figure>
+        </div>
+
+        <ul class="why__list">
+          <li class="why-item" data-reveal>
+            <svg class="why-item__icon" viewBox="0 0 56 56" aria-hidden="true"><path d="M8 44h40M8 40v8M48 40v8"/><path d="M14 36V18l14-8 14 8v18"/><path d="M22 36V24h12v12"/><path class="accent" d="M20 18h16"/></svg>
+            <div>
+              <h3>Experiencia técnica y comercial</h3>
+              <p>Conocemos a la perfección las especificaciones técnicas y comerciales de cada producto disponible en el mercado, para recomendar el sistema justo para cada edificio.</p>
+            </div>
+          </li>
+          <li class="why-item" data-reveal>
+            <svg class="why-item__icon" viewBox="0 0 56 56" aria-hidden="true"><path d="M28 48s-14-12.5-14-24a14 14 0 0 1 28 0c0 11.5-14 24-14 24z"/><circle cx="28" cy="24" r="5"/><path class="accent" d="M6 24a22 22 0 0 1 4-12M50 24a22 22 0 0 0-4-12"/></svg>
+            <div>
+              <h3>Cobertura nacional</h3>
+              <p>No importa en qué parte de Paraguay estés: nuestra presencia nos permite atenderte en cualquier punto del país, sin complicaciones.</p>
+            </div>
+          </li>
+          <li class="why-item" data-reveal>
+            <svg class="why-item__icon" viewBox="0 0 56 56" aria-hidden="true"><path d="M10 30v-4a18 18 0 0 1 36 0v4"/><rect x="6" y="30" width="9" height="13" rx="2"/><rect x="41" y="30" width="9" height="13" rx="2"/><path d="M45.5 43v2a5 5 0 0 1-5 5H32"/><path class="accent" d="M22 26h12M25 21h6"/></svg>
+            <div>
+              <h3>Soporte técnico real</h3>
+              <p>Técnicos propios, nacionales e internacionales, con planes preventivos y correctivos para todas las marcas. Un mismo equipo responde por el sistema.</p>
+            </div>
+          </li>
+          <li class="why-item" data-reveal>
+            <svg class="why-item__icon" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="19"/><path d="M28 16v12l8 5"/><path class="accent" d="M4 28h5M47 28h5M28 4v5M28 47v5"/></svg>
+            <div>
+              <h3>Más de 30 años</h3>
+              <p>Tres décadas de obras en sedes corporativas, hoteles, edificios públicos y residenciales. Una trayectoria que se mide en sistemas funcionando.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PROCESO ============ -->
+    <section class="process section" id="proceso" aria-labelledby="process-title">
+      <div class="container process__grid">
+        <div class="process__intro">
+          <p class="section-index mono" data-reveal><span>05</span> Proceso</p>
+          <h2 class="section-title" id="process-title" data-reveal>Cuatro etapas, <em>un solo responsable.</em></h2>
+          <p class="section-lead" data-reveal>Acompañamos cada sistema desde la primera visita hasta el último mantenimiento.</p>
+        </div>
+        <ol class="steps">
+          <li class="steps__line" aria-hidden="true"><span></span></li>
+          <li class="step" data-reveal>
+            <span class="step__num mono">01</span>
+            <div>
+              <h3 class="step__title">Relevamiento</h3>
+              <p>Visitamos la obra, analizamos el uso del edificio, las cargas térmicas y las condiciones de instalación.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num mono">02</span>
+            <div>
+              <h3 class="step__title">Proyecto</h3>
+              <p>Dimensionamos el sistema adecuado y presentamos la propuesta técnica y comercial, con equipos y plazos claros.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num mono">03</span>
+            <div>
+              <h3 class="step__title">Instalación</h3>
+              <p>Montaje con técnicos propios, puesta en marcha, pruebas y entrega del sistema funcionando.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num mono">04</span>
+            <div>
+              <h3 class="step__title">Mantenimiento</h3>
+              <p>Planes preventivos y correctivos para que el sistema rinda al máximo durante toda su vida útil.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="cta-final" aria-labelledby="cta-title">
+      <div class="cta-final__lines" aria-hidden="true">
+        <svg viewBox="0 0 1200 400" preserveAspectRatio="none"><path d="M-20 300 C 200 240, 380 340, 600 260 S 1000 160, 1220 220"/><path d="M-20 340 C 240 280, 420 380, 640 300 S 1020 200, 1220 260"/><path d="M-20 260 C 180 200, 360 300, 580 220 S 980 120, 1220 180"/></svg>
+      </div>
+      <div class="container cta-final__inner">
+        <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span>Presupuesto sin cargo</p>
+        <h2 class="cta-final__title" id="cta-title" data-reveal>¿Tenés una obra <em>en marcha?</em></h2>
+        <p class="cta-final__lead" data-reveal>Contanos qué necesitás y un ingeniero de Delta te responde con una propuesta a medida.</p>
+        <div class="cta-final__actions" data-reveal>
+          <a class="btn btn--light btn--lg" href="#contacto" data-magnetic><span class="btn__label">Pedir presupuesto</span><svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--ghost btn--lg" href="tel:+59521391204" data-magnetic><span class="btn__label">Llamar · 021 391 204</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="contact section" id="contacto" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__form-wrap">
+          <p class="section-index mono" data-reveal><span>06</span> Contacto</p>
+          <h2 class="section-title" id="contact-title" data-reveal>Hablemos de <em>tu proyecto.</em></h2>
+
+          <!-- [PENDIENTE] reemplazar TU_ID_FORMSPREE por el endpoint real -->
+          <form class="form" action="https://formspree.io/f/TU_ID_FORMSPREE" method="POST" novalidate data-reveal>
+            <div class="form__grid">
+              <div class="field">
+                <label for="f-nombre">Nombre y apellido <span aria-hidden="true">*</span></label>
+                <input id="f-nombre" name="nombre" type="text" autocomplete="name" required aria-describedby="e-nombre">
+                <p class="field__error" id="e-nombre"></p>
+              </div>
+              <div class="field">
+                <label for="f-empresa">Empresa</label>
+                <input id="f-empresa" name="empresa" type="text" autocomplete="organization">
+              </div>
+              <div class="field">
+                <label for="f-telefono">Teléfono <span aria-hidden="true">*</span></label>
+                <input id="f-telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="e-telefono" placeholder="09XX XXX XXX">
+                <p class="field__error" id="e-telefono"></p>
+              </div>
+              <div class="field">
+                <label for="f-email">Email <span aria-hidden="true">*</span></label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email">
+                <p class="field__error" id="e-email"></p>
+              </div>
+              <div class="field field--full">
+                <label for="f-servicio">Tipo de servicio <span aria-hidden="true">*</span></label>
+                <div class="select">
+                  <select id="f-servicio" name="servicio" required aria-describedby="e-servicio">
+                    <option value="">Elegí una opción</option>
+                    <option>Instalación de sistema nuevo</option>
+                    <option>Mantenimiento preventivo / plan</option>
+                    <option>Reparación / servicio técnico</option>
+                    <option>Equipos Trane / repuestos</option>
+                    <option>Ventilación y conductos</option>
+                    <option>Otro</option>
+                  </select>
+                </div>
+                <p class="field__error" id="e-servicio"></p>
+              </div>
+              <div class="field field--full">
+                <label for="f-mensaje">Mensaje <span aria-hidden="true">*</span></label>
+                <textarea id="f-mensaje" name="mensaje" rows="5" required aria-describedby="e-mensaje" placeholder="Tipo de edificio, superficie aproximada, ciudad…"></textarea>
+                <p class="field__error" id="e-mensaje"></p>
+              </div>
+              <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+            </div>
+            <div class="form__foot">
+              <button class="btn btn--primary btn--lg" type="submit"><span class="btn__label">Enviar consulta</span><svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+              <p class="form__status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+
+        <aside class="contact__info" data-reveal>
+          <div class="contact__map">
+            <iframe title="Ubicación de Delta Montajes en el mapa" src="https://www.google.com/maps?q=14+de+Mayo+842,+Asunci%C3%B3n,+Paraguay&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <dl class="contact__data">
+            <div><dt class="mono">Dirección</dt><dd>14 de Mayo 842<br>Asunción, Paraguay</dd></div>
+            <div><dt class="mono">Teléfono</dt><dd><a href="tel:+59521391204">+595 21 391-204</a> / <a href="tel:+59521391205">205</a></dd></div>
+            <div><dt class="mono">Email</dt><dd><a href="mailto:delta@conexion.com.py">delta@conexion.com.py</a></dd></div>
+            <div><dt class="mono">Horario</dt><dd>Lun a Vie · 7:30–12:00 / 13:00–17:30<br>Sábados · 8:00–11:30</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
   </main>
 
   <!-- ============ FOOTER ============ -->
-  <footer class="site-footer" id="contacto">
+  <footer class="site-footer">
     <div class="container site-footer__grid">
       <div class="site-footer__brand">
         <img src="assets/img/brand/delta-logo-blanco-480.webp" width="480" height="135" alt="Delta Montajes S.R.L." loading="lazy">
         <p>Ingeniería electromecánica en climatización, ventilación mecánica y refrigeración industrial. +30 años en todo Paraguay.</p>
-        <a class="btn btn--primary" href="mailto:delta@conexion.com.py?subject=Pedido%20de%20presupuesto">Pedir presupuesto</a>
+        <a class="btn btn--primary" href="#contacto">Pedir presupuesto</a>
       </div>
+      <nav aria-label="Pie de página">
+        <h2 class="site-footer__title mono">Navegación</h2>
+        <ul class="site-footer__list">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#equipos">Equipos</a></li>
+          <li><a href="obras.html">Obras</a></li>
+          <li><a href="#trane">Partner Trane</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
       <div>
         <h2 class="site-footer__title mono">Contacto</h2>
         <ul class="site-footer__list">
           <li><a href="tel:+59521391204">+595 21 391-204/5</a></li>
           <li><a href="mailto:delta@conexion.com.py">delta@conexion.com.py</a></li>
-          <li>14 de Mayo 842</li>
-          <li><a href="https://www.facebook.com/deltasrlmontajes" target="_blank" rel="noopener">Facebook</a></li>
+          <li>14 de Mayo 842, Asunción</li>
         </ul>
-      </div>
-      <div>
-        <h2 class="site-footer__title mono">Horario</h2>
+        <h2 class="site-footer__title mono site-footer__title--spaced">Horario</h2>
         <ul class="site-footer__list">
           <li>Lun a Vie · 7:30–12:00 / 13:00–17:30</li>
           <li>Sábados · 8:00–11:30</li>
         </ul>
       </div>
+      <div>
+        <h2 class="site-footer__title mono">Redes</h2>
+        <ul class="site-footer__social">
+          <li><a href="https://www.facebook.com/deltasrlmontajes" target="_blank" rel="noopener" aria-label="Facebook de Delta Montajes (abre en otra pestaña)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a></li>
+          <li><a href="https://wa.me/595XXXXXXXXX" target="_blank" rel="noopener" aria-label="WhatsApp de Delta Montajes (abre en otra pestaña)" data-wa><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a></li>
+        </ul>
+      </div>
     </div>
     <div class="container site-footer__bottom mono">
-      <span>© <span data-year>2026</span> Delta Montajes S.R.L.</span>
-      <span>Partner oficial Trane</span>
+      <span>© <span data-year>2026</span> Delta Montajes S.R.L. · Todos los derechos reservados</span>
+      <a href="#top">Volver arriba ↑</a>
     </div>
   </footer>
+
+  <!-- WhatsApp flotante — [PENDIENTE] número real en lugar de 595XXXXXXXXX -->
+  <a class="wa-float" href="https://wa.me/595XXXXXXXXX?text=Hola%20Delta%20Montajes%2C%20quisiera%20pedir%20un%20presupuesto." target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp (abre en otra pestaña)" data-wa>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+    <span class="wa-float__label">¿Consultas? Escribinos</span>
+  </a>
+
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-  <script src="js/flow.js?v=202610141705" defer></script>
-  <script src="js/main.js?v=202610141705" defer></script>
+  <script src="js/flow.js?v=202610142031" defer></script>
+  <script src="js/main.js?v=202610142031" defer></script>
 </body>
 </html>

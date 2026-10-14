@@ -65,23 +65,36 @@ Sudameris, Ibis, Tu Financiera, Sallustro, Caja Mutual de Cooperativistas del Pa
 - **Tipografías:** Archivo (títulos, `font-stretch: 112%`, 800, itálica para énfasis como el logo) · IBM Plex Sans (texto) · IBM Plex Mono (etiquetas técnicas, cifras).
 - **Fotos del hero:** gris + duotono cobalto (`mix-blend-mode: color`) para unificar fotos de calidad dispar.
 
+## Secciones del home (orden)
+hero → `#cifras` (contadores) → clientes (marquee 2 filas) → `#servicios` (3 tarjetas + tabs de equipos `#equipos`) → `#obras` (8 destacadas, scroll horizontal fijado) → `#trane` → `#nosotros` (por qué Delta) → `#proceso` (4 pasos con línea) → CTA final → `#contacto` (form + mapa) → footer.
+
 ## Decisiones
-- JS: `js/main.js` (Lenis, header, menú, hero intro, magnéticos) y `js/flow.js` (canvas de aire). GSAP 3.12.5 + ScrollTrigger + Lenis 1.1.13 por CDN, todo con `defer`.
-- Animaciones: sin GSAP o con reduced-motion el contenido se muestra igual (clase `anim-fallback`, y timeout de seguridad de 4 s en el `<head>`).
-- Header: transparente sobre el hero, se compacta (84→64 px, fondo ink con blur) pasados 40 px, se oculta bajando y reaparece subiendo. Menú mobile < 1024 px, pantalla completa con focus trap y Escape.
-- Hero: slideshow de 3 fotos de campo (la 1ª precargada, las otras se cargan en `load`), split-text por líneas, badge Trane + specs. Entre 1024 y 1279 px los CTAs van debajo del texto para no chocar con el badge.
-- Cache-busting: `css/styles.css` y `js/*.js` llevan `?v=AAAAMMDDhhmm` en index.html; actualizarlo en cada push que toque CSS/JS (GitHub Pages cachea 10 min).
-- Preview local: `npx serve delta-montajes -l 5077` (config `delta-montajes` en ../.claude/launch.json).
-- Los `div` ancla vacíos al final de `<main>` son temporales: reemplazar al construir cada sección. Ya hay un footer oscuro básico (`#contacto`) para que la página no termine en blanco; el contacto completo con formulario va antes del footer.
+- JS: `js/main.js` (común a las 2 páginas: Lenis, header, menú, hero, reveals, contadores, tabs, obras fijadas, proceso, parallax, form, cursor, transición de página), `js/flow.js` (canvas de aire del hero), `js/obras-data.js` (datos de las 20 obras, fuente única) y `js/obras.js` (masonry, filtros con GSAP Flip, modal `<dialog>`). GSAP 3.12.5 (+ScrollTrigger, +Flip en obras) y Lenis 1.1.13 por CDN, todo con `defer`.
+- **Regla anti "página en blanco":** el contenido solo se oculta para animarlo cuando JS confirmó GSAP (clase `reveal-on`). Los reveals se disparan al entrar, salir o volver, y un barrido revela lo que ya quedó arriba si la página abre scrolleada (recarga, atrás, `#ancla`). El hero tiene fallback a 2,5 s. No volver a usar `once: true` solo con `onEnter`.
+- En `start()` el pin de obras se crea ANTES que los demás ScrollTrigger (los de abajo miden con el espacio del pin).
+- Header: transparente sobre el hero, se compacta (84→64 px) pasados 40 px, se oculta bajando. Menú mobile < 1024 px con focus trap y Escape.
+- Hero: slideshow de 3 fotos de campo, split-text por líneas, badge Trane + specs. Entre 1024 y 1279 px los CTAs van debajo del texto.
+- Obras destacadas: ≥1024 px pin + translateX con scrub; < 1024 px scroll-snap nativo. Las fotos se precargan 1200 px antes (con transform el lazy-load nativo no las ve).
+- obras.html: masonry con CSS grid (`grid-auto-rows: 8px` + `data-span` por atributo, no inline: Flip limpia los estilos inline). Deep link `obras.html#slug` abre el modal (las tarjetas de la home lo usan).
+- Formulario: validación propia; mientras el action tenga `TU_ID_FORMSPREE` no envía y muestra el mail.
+- GA4: el snippet no carga nada mientras el ID sea `G-XXXXXXXXXX`.
+- Cache-busting: `?v=AAAAMMDDhhmm` en CSS/JS de ambas páginas; actualizarlo en cada push que toque CSS/JS (GitHub Pages cachea 10 min).
+- Contenido repetido (logos, equipos, tarjetas de obras, obras.html completo) se generó con scripts one-off a partir de `js/obras-data.js`; hoy se edita directo en el HTML. obras.html copia header/footer de index.html: si cambian, actualizar ambos.
+- SEO: `HVACBusiness` en JSON-LD, OG con `assets/img/og-image.jpg` (1200×630), `sitemap.xml`, `robots.txt`, favicon SVG + apple-touch-icon. Las URLs absolutas apuntan a www.deltamontajes.com (dominio final).
+- Preview local: `npx serve delta-montajes -l 5077` (config `delta-montajes` en ../.claude/launch.json). Repo: github.com/ivanmaldonado05-cmd/deltamontajes (main → GitHub Pages).
 
 ## Pendientes con el cliente
 - [ ] Número de WhatsApp (placeholder `595XXXXXXXXX`)
 - [ ] Endpoint Formspree (placeholder)
 - [ ] ID de GA4 (placeholder)
-- [ ] Ciudad de la dirección "14 de Mayo 842" (¿Asunción?) para mapa y schema.org
+- [ ] Confirmar ciudad de "14 de Mayo 842": se asumió Asunción (Google Maps la ubica ahí) en mapa, footer y schema.org
 - [ ] Sistema instalado en Polideportivo Arena SND (no figura en el Wix)
 - [ ] El Wix lista "Palacio de Justicia Caazapá" dos veces; la home lo llama "Palacio de Justicia CDE". Asumido: la foto del edificio naranja = CDE, la de ladrillo = Caazapá. Confirmar.
-- [ ] Ubicación (ciudad) de cada obra
+- [ ] Ubicación de cada obra: asumidas sin confirmar Asunción (Toyotoshi, Dazzler, SND, DOT, Boggiani, Ibis, MADES); CDE, Caazapá y San Lorenzo salen del nombre; el resto figura como "Paraguay" (`ubicacionConfirmada:false` en obras-data.js)
 - [ ] Fotos en mejor resolución: varias obras son ≤ 660 px (IPS CDE, Boggiani, Divina Tower, Ágora, Toyotoshi San Lorenzo) y muchas son renders, no fotos reales de la instalación
 - [ ] Fotos reales de equipos instalados (las actuales son imágenes de catálogo con fondo blanco)
-- [ ] Cantidad real de obras y de clientes para los contadores
+- [ ] Cifras reales para los contadores: hoy +20 obras y +20 clientes (lo que muestra el Wix) y 17 departamentos de cobertura
+- [ ] Descripciones de obras: redactadas a partir del sistema y tipo de edificio; validar con el cliente
+- [ ] Más fotos por obra para la galería del modal (hoy 1 por obra, 2 en SND)
+- [ ] Filtro "Ventilación" en obras: no hay obras de ventilación cargadas; agregar si el cliente tiene
+- [ ] Instagram / LinkedIn si existen (hoy solo Facebook)
