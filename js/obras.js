@@ -116,6 +116,8 @@
     $('[data-modal-count]').textContent = String(i + 1).padStart(2, '0') + ' / ' + String(list.length).padStart(2, '0');
     $('[data-modal-title]').textContent = o.nombre;
     $('[data-modal-sys]').textContent = o.sistemas.length ? o.sistemas.map(function (s) { return SIS[s]; }).join(' + ') : 'Climatización';
+    $('[data-modal-cap-row]').hidden = !o.tr;
+    $('[data-modal-cap]').textContent = o.tr ? window.formatTR(o.tr) : '';
     $('[data-modal-loc]').textContent = o.ubicacion;
     $('[data-modal-tipo]').textContent = o.tipo;
     $('[data-modal-desc]').textContent = o.desc;

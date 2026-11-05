@@ -24,29 +24,32 @@ assets/logos        20 logos de clientes
 - Quiénes somos: ingeniería electromecánica, capital y profesionales nacionales e internacionales, cobertura nacional, representantes de TRANE y distribuidores de marcas reconocidas. Repuestos originales.
 - Servicios: Instalación, Mantenimiento (servicio técnico de todas las marcas, planes preventivo/correctivo), Reparación (técnicos nacionales e internacionales en todo el país).
 - Diferenciales: Experiencia (specs técnicas y comerciales de cada producto) · Accesibilidad (cobertura en todo Paraguay).
-- Contacto: 14 de Mayo 842 · +595 21 391-204/5 · delta@conexion.com.py · facebook.com/deltasrlmontajes
+- Contacto (actualizado 2026-11-05 con la presentación): 14 de Mayo 842 · +595 21 391-204/5 · cel./WhatsApp +595 981 409 748 · administracion@deltamontajes.com (principal en header, footer, schema y form; delta@conexion.com.py queda como segunda línea en el bloque de contacto) · facebook.com/deltasrlmontajes
 - Horario: Lun–Vie 7:30–12:00 / 13:00–17:30 · Sáb 8:00–11:30
 
-### Obras (orden del Wix → archivo)
+### Presentación oficial (PDF "Presentacion Delta S.R.L. 12-09-26", recibida 2026-11)
+Fuente de las capacidades en TR, sistemas y ubicaciones corregidas abajo. Agregado de ahí: email administracion@, celular/WhatsApp, "Proyecto y fiscalización de obra" en el servicio Instalación. El PDF dice "VRV"; el sitio mantiene "VRF".
+
+### Obras (orden del Wix → archivo; sistemas y TR actualizados con la presentación)
 | Obra | Sistema | Archivo |
 |---|---|---|
-| Edificio Toyotoshi S.A. | Agua fría + VRF | toyotoshi |
-| Dazzler (hotel) | VRF | dazzler |
-| IPS CDE | Agua fría | ips-cde |
-| Palacio de Justicia CDE | Agua fría | palacio-justicia-cde |
-| Polideportivo Arena SND | ? | polideportivo-arena-snd |
+| Edificio Corporativo Toyotoshi (Mcal. López) | Agua fría + VRF | toyotoshi |
+| Hotel Dazzler (CDE) | VRF | dazzler |
+| IPS CDE | Agua fría 1.400 TR | ips-cde |
+| Palacio de Justicia CDE | Agua fría 1.600 TR | palacio-justicia-cde |
+| Polideportivo Arena SND | Rooftop 360 TR | polideportivo-arena-snd |
 | Edificio DOT | VRF | edificio-dot |
-| Edificio Corporativo Torre Boggiani | Split | torre-boggiani |
-| Hotel Ibis | Agua fría | hotel-ibis |
-| Edificio Olier | Split | edificio-olier |
-| Palacio de Justicia Caazapá | Agua fría | palacio-justicia-caazapa |
-| Edificio Torre de Altea | Split | torre-de-altea |
-| Edificio Zuba | Split | edificio-zuba |
-| Edificio Ágora | Split | edificio-agora |
-| Toyotoshi San Lorenzo | Split | toyotoshi-san-lorenzo |
-| Edificio MADES | Agua fría | edificio-mades |
+| Edificio Corporativo Torre Boggiani (Caja Mutual) | Split 360 TR | torre-boggiani |
+| Hotel Ibis | Agua fría 160 TR | hotel-ibis |
+| Edificio Olier | Split 320 TR | edificio-olier |
+| Palacio de Justicia Caazapá | Agua fría 80 TR | palacio-justicia-caazapa |
+| Edificio Torre de Altea | Split 320 TR | torre-de-altea |
+| Edificios Zuba II, III y IV | Split 350 TR | edificio-zuba |
+| Edificio Ágora | Split 250 TR | edificio-agora |
+| Toyotoshi San Lorenzo | Split 280 TR | toyotoshi-san-lorenzo |
+| Edificio Corporativo MADES | Agua fría + VRF | edificio-mades |
 | Edificio Genoa | Split | edificio-genoa |
-| Edificio Divina Tower | Split | divina-tower |
+| Divina Tower Apart Hotel | Split | divina-tower |
 | Edificio Finesse | Split | edificio-finesse |
 | Edificio Corporativo TOCSA | VRF | corporativo-tocsa |
 | Edificio Bali V | Split | edificio-bali-v |
@@ -75,6 +78,7 @@ hero → `#cifras` (contadores) → clientes (marquee 2 filas) → `#servicios` 
 - Header: transparente sobre el hero, se compacta (84→64 px) pasados 40 px, se oculta bajando. Menú mobile < 1024 px con focus trap y Escape.
 - Hero: slideshow de 3 fotos de campo, split-text por líneas, badge Trane + specs. Entre 1024 y 1279 px los CTAs van debajo del texto.
 - Obras destacadas: ≥1024 px pin + translateX con scrub; < 1024 px scroll-snap nativo. Las fotos se precargan 1200 px antes (con transform el lazy-load nativo no las ve).
+- Capacidad: campo `tr` en obras-data.js; se muestra como "1.600 TR · Agua fría" en las tarjetas (home y obras.html) y en la fila "Capacidad" del modal (oculta si no hay dato). Filtro "Sistema rooftop" agregado por SND. Las tarjetas se sincronizaron con un script one-off desde obras-data.js.
 - obras.html: masonry con CSS grid (`grid-auto-rows: 8px` + `data-span` por atributo, no inline: Flip limpia los estilos inline). Deep link `obras.html#slug` abre el modal (las tarjetas de la home lo usan).
 - Formulario: validación propia; mientras el action tenga `TU_ID_FORMSPREE` no envía y muestra el mail.
 - GA4: el snippet no carga nada mientras el ID sea `G-XXXXXXXXXX`.
@@ -84,17 +88,19 @@ hero → `#cifras` (contadores) → clientes (marquee 2 filas) → `#servicios` 
 - Preview local: `npx serve delta-montajes -l 5077` (config `delta-montajes` en ../.claude/launch.json). Repo: github.com/ivanmaldonado05-cmd/deltamontajes (main → GitHub Pages).
 
 ## Pendientes con el cliente
-- [ ] Número de WhatsApp (placeholder `595XXXXXXXXX`)
+- [ ] Confirmar que +595 981 409 748 tiene WhatsApp (ya está en botón flotante, footer y bloque de contacto) y si delta@conexion.com.py sigue activo
 - [ ] Endpoint Formspree (placeholder)
 - [ ] ID de GA4 (placeholder)
 - [ ] Confirmar ciudad de "14 de Mayo 842": se asumió Asunción (Google Maps la ubica ahí) en mapa, footer y schema.org
-- [ ] Sistema instalado en Polideportivo Arena SND (no figura en el Wix)
-- [ ] El Wix lista "Palacio de Justicia Caazapá" dos veces; la home lo llama "Palacio de Justicia CDE". Asumido: la foto del edificio naranja = CDE, la de ladrillo = Caazapá. Confirmar.
-- [ ] Ubicación de cada obra: asumidas sin confirmar Asunción (Toyotoshi, Dazzler, SND, DOT, Boggiani, Ibis, MADES); CDE, Caazapá y San Lorenzo salen del nombre; el resto figura como "Paraguay" (`ubicacionConfirmada:false` en obras-data.js)
+- [ ] Ubicación de cada obra: asumidas sin confirmar Asunción (SND, DOT, Boggiani, Ibis, MADES); Toyotoshi (Mcal. López) y Dazzler (CDE) salen de la presentación; CDE, Caazapá y San Lorenzo salen del nombre; el resto figura como "Paraguay" (`ubicacionConfirmada:false` en obras-data.js)
 - [ ] Fotos en mejor resolución: varias obras son ≤ 660 px (IPS CDE, Boggiani, Divina Tower, Ágora, Toyotoshi San Lorenzo) y muchas son renders, no fotos reales de la instalación
 - [ ] Fotos reales de equipos instalados (las actuales son imágenes de catálogo con fondo blanco)
 - [ ] Cifras reales para los contadores: hoy +20 obras y +20 clientes (lo que muestra el Wix) y 17 departamentos de cobertura
-- [ ] Descripciones de obras: redactadas a partir del sistema y tipo de edificio; validar con el cliente
+- [ ] Descripciones de obras: redactadas a partir del sistema, tipo de edificio y TR; validar con el cliente
+- (resuelto 2026-11-05) Sistema de SND = rooftop 360 TR; fotos de Palacio de Justicia CDE/Caazapá confirmadas (la naranja tiene el cartel de CDE)
 - [ ] Más fotos por obra para la galería del modal (hoy 1 por obra, 2 en SND)
 - [ ] Filtro "Ventilación" en obras: no hay obras de ventilación cargadas; agregar si el cliente tiene
+- [ ] TR de las obras que la presentación no informa: Toyotoshi, Dazzler, DOT, MADES, Genoa, Divina Tower, Finesse, TOCSA, Bali V
+- [ ] Obras de la presentación que no están en el sitio (faltan fotos): Royal Plaza 280 TR, Ventura San Vicente 200 TR, HONDA Asunción 180 TR, Margareta 200 TR, María Antonia 220 TR, Palacio de Justicia Cap. Bado 80 TR, Liga Encarnacena, Hospitales de Contingencia, Ball Corporation 300 TR, Aqua Village (VRV), Shopping Los Jardines 300 TR agua fría, Centro Acuático Olímpico (VRV + agua fría), Cooperativa Universitaria (VRV), More Mariscal y Fibonacci (multi-split), Tienda ACE 240 TR rooftop, SND Polideportivo Tenis de mesa 120 TR rooftop
+- [ ] Clientes del PDF que no están en el marquee: Conempa, González Acosta & Wood, Gómez Abente Constructora, Ball Corporation
 - [ ] Instagram / LinkedIn si existen (hoy solo Facebook)

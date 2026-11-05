@@ -454,7 +454,7 @@
       var endpoint = form.getAttribute('action');
       if (/TU_ID_FORMSPREE/.test(endpoint)) {
         // [PENDIENTE] sin endpoint real: avisar y ofrecer el mail
-        status.innerHTML = 'El formulario todavía no está conectado. Escribinos a <a href="mailto:delta@conexion.com.py">delta@conexion.com.py</a>.';
+        status.innerHTML = 'El formulario todavía no está conectado. Escribinos a <a href="mailto:administracion@deltamontajes.com">administracion@deltamontajes.com</a>.';
         status.classList.add('is-error');
         return;
       }
