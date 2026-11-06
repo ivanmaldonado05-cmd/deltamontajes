@@ -85,8 +85,8 @@ hero → `#cifras` (contadores) → clientes (marquee 2 filas) → `#servicios` 
 - Cache-busting: `?v=AAAAMMDDhhmm` en CSS/JS de ambas páginas; actualizarlo en cada push que toque CSS/JS (GitHub Pages cachea 10 min).
 - Contenido repetido (logos, equipos, tarjetas de obras, obras.html completo) se generó con scripts one-off a partir de `js/obras-data.js`; hoy se edita directo en el HTML. obras.html copia header/footer de index.html: si cambian, actualizar ambos.
 - SEO: `HVACBusiness` en JSON-LD, OG con `assets/img/og-image.jpg` (1200×630), `sitemap.xml`, `robots.txt`, favicon SVG + apple-touch-icon. Las URLs absolutas apuntan a www.deltamontajes.com (dominio final).
-- Deploy (2026-11-06): Hostinger, sitio PHP/HTML `deltamontajes.com`, integración GitHub (rama main → public_html). `.htaccess`: bloquea CLAUDE.md, redirige deltamontajes.com → www solo con HTTPS activo (el http→https lo hace "Forzar HTTPS" de Hostinger), caché y gzip. DNS sigue en Wix: registro A hacia la IP de Hostinger, MX sin tocar.
-- Preview local: `npx serve delta-montajes -l 5077` (config `delta-montajes` en ../.claude/launch.json). Repo: github.com/ivanmaldonado05-cmd/deltamontajes (main → GitHub Pages).
+- Deploy (2026-11-06): Hostinger, sitio PHP/HTML `deltamontajes.com`, integración GitHub (rama main → public_html). `.htaccess`: bloquea CLAUDE.md, redirige deltamontajes.com → www solo con HTTPS activo (el http→https lo hace "Forzar HTTPS" de Hostinger), caché y gzip. LIVE desde 2026-11-06: DNS sigue en Wix (no se pudo desvincular el dominio del sitio Wix: lo paga una tarjeta del cliente), A @ → 185.213.81.230, CNAME www → deltamontajes.com, MX Google Workspace y TXT sin tocar. SSL Let's Encrypt (Lifetime SSL de Hostinger) y http→https ya activos.
+- Preview local: `npx serve delta-montajes -l 5077` (config `delta-montajes` en ../.claude/launch.json). Repo: github.com/ivanmaldonado05-cmd/deltamontajes (main → Hostinger; GitHub Pages pendiente de desactivar).
 
 ## Pendientes con el cliente
 - [ ] Confirmar que +595 981 409 748 tiene WhatsApp (ya está en botón flotante, footer y bloque de contacto) y si delta@conexion.com.py sigue activo
