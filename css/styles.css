@@ -1327,8 +1327,8 @@ html.reveal-on .steps__line span { transform: scaleY(0); }
    ========================================================= */
 .wa-float {
   position: fixed; right: max(1rem, env(safe-area-inset-right)); bottom: max(1rem, env(safe-area-inset-bottom)); z-index: 80;
-  display: flex; align-items: center; gap: .75rem;
-  height: 56px; padding: 0 16px;
+  display: flex; align-items: center;
+  height: 56px; min-width: 56px; padding: 0 16px;
   color: var(--white);
   background: #1faa59;
   border-radius: 28px;
@@ -1339,10 +1339,11 @@ html.reveal-on .steps__line span { transform: scaleY(0); }
 .wa-float__label {
   max-width: 0; overflow: hidden; white-space: nowrap;
   font-size: var(--fs-sm); font-weight: 600;
-  transition: max-width .5s var(--ease-out);
+  /* sin margen cuando está cerrado: así el botón es un círculo de 56 px */
+  transition: max-width .5s var(--ease-out), margin-left .5s var(--ease-out);
 }
 .wa-float:hover { background: #178a48; transform: translateY(-2px); }
-.wa-float:hover .wa-float__label, .wa-float:focus-visible .wa-float__label { max-width: 14rem; }
+.wa-float:hover .wa-float__label, .wa-float:focus-visible .wa-float__label { max-width: 14rem; margin-left: .75rem; }
 .wa-float::before {
   content: ""; position: absolute; inset: 0; border-radius: inherit;
   box-shadow: 0 0 0 0 rgba(31, 170, 89, .5);
