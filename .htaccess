@@ -1,0 +1,45 @@
+# Delta Montajes — Hostinger (Apache/LiteSpeed). GitHub Pages ignora este archivo.
+
+Options -Indexes
+
+# Archivos internos del repo: no se sirven
+<FilesMatch "^(CLAUDE\.md|\.gitignore|\.nojekyll)$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # deltamontajes.com -> www.deltamontajes.com (solo con HTTPS ya activo;
+  # el paso http -> https lo hace "Forzar HTTPS" de Hostinger cuando el SSL esté emitido).
+  # No toca el link de vista previa de Hostinger ni la validación del certificado.
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteCond %{HTTPS} on
+  RewriteCond %{HTTP_HOST} ^deltamontajes\.com$ [NC]
+  RewriteRule ^ https://www.deltamontajes.com%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Compresión
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json image/svg+xml application/xml text/plain
+</IfModule>
+
+# Caché: CSS/JS llevan ?v= en el HTML, así que pueden cachearse mucho; el HTML se revalida siempre
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 week"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/xml "access plus 1 day"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

@@ -85,6 +85,7 @@ hero → `#cifras` (contadores) → clientes (marquee 2 filas) → `#servicios` 
 - Cache-busting: `?v=AAAAMMDDhhmm` en CSS/JS de ambas páginas; actualizarlo en cada push que toque CSS/JS (GitHub Pages cachea 10 min).
 - Contenido repetido (logos, equipos, tarjetas de obras, obras.html completo) se generó con scripts one-off a partir de `js/obras-data.js`; hoy se edita directo en el HTML. obras.html copia header/footer de index.html: si cambian, actualizar ambos.
 - SEO: `HVACBusiness` en JSON-LD, OG con `assets/img/og-image.jpg` (1200×630), `sitemap.xml`, `robots.txt`, favicon SVG + apple-touch-icon. Las URLs absolutas apuntan a www.deltamontajes.com (dominio final).
+- Deploy (2026-11-06): Hostinger, sitio PHP/HTML `deltamontajes.com`, integración GitHub (rama main → public_html). `.htaccess`: bloquea CLAUDE.md, redirige deltamontajes.com → www solo con HTTPS activo (el http→https lo hace "Forzar HTTPS" de Hostinger), caché y gzip. DNS sigue en Wix: registro A hacia la IP de Hostinger, MX sin tocar.
 - Preview local: `npx serve delta-montajes -l 5077` (config `delta-montajes` en ../.claude/launch.json). Repo: github.com/ivanmaldonado05-cmd/deltamontajes (main → GitHub Pages).
 
 ## Pendientes con el cliente
