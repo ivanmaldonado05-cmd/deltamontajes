@@ -462,8 +462,10 @@ body.menu-open .site-header::before { opacity: 0; }
   display: none;
 }
 .trane-badge {
-  display: flex; align-items: center; gap: 1rem;
-  padding: .75rem 1.25rem .75rem .75rem;
+  position: relative;
+  display: flex; align-items: center; gap: 1.25rem;
+  padding: 1rem 1.5rem 1rem 1rem;
+  box-shadow: inset 3px 0 0 var(--trane-red);
   background: rgba(255, 255, 255, .06);
   border: 1px solid rgba(255, 255, 255, .16);
   border-radius: var(--radius);
@@ -474,17 +476,29 @@ body.menu-open .site-header::before { opacity: 0; }
 .trane-badge:hover { border-color: rgba(255, 255, 255, .4); background: rgba(255, 255, 255, .1); }
 .trane-badge__logo {
   display: grid; place-items: center;
-  width: 108px; height: 48px;
+  width: 172px; height: 76px;
   background: var(--white);
   border-radius: 2px;
+  transition: transform .4s var(--ease-out, ease);
 }
-.trane-badge__logo img { width: 88px; }
+.trane-badge__logo img { width: 142px; }
+.trane-badge:hover .trane-badge__logo { transform: scale(1.03); }
 .trane-badge__text {
-  display: grid; gap: .15rem;
-  font-size: var(--fs-sm); line-height: 1.3;
+  display: grid; gap: .3rem;
+  font-size: var(--fs-base, 1rem); line-height: 1.3; font-weight: 500;
   color: rgba(255, 255, 255, .85);
 }
-.trane-badge__text .mono { color: var(--air); }
+.trane-badge__text .mono { color: var(--air); font-size: var(--fs-xs, .75rem); font-weight: 400; letter-spacing: .08em; }
+
+/* otras marcas (logos blancos monocromo) */
+.hero-brands { margin-top: 1rem; }
+.hero-brands__label { font-size: var(--fs-xs, .75rem); color: rgba(255, 255, 255, .55); }
+.hero-brands__list { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.5rem; margin-top: .6rem; }
+.hero-brands__list img { width: auto; opacity: .78; transition: opacity .3s; }
+.hero-brands__list li:hover img { opacity: 1; }
+.hero-brands__list li:nth-child(1) img { height: 26px; }
+.hero-brands__list li:nth-child(2) img { height: 15px; }
+.hero-brands__list li:nth-child(3) img { height: 26px; }
 
 .hero__specs {
   display: grid; grid-template-columns: repeat(3, auto); gap: 1.5rem;
@@ -515,20 +529,24 @@ body.menu-open .site-header::before { opacity: 0; }
   .hero__aside {
     display: block; position: relative;
     right: auto; bottom: auto;
-    margin: -5rem var(--gutter) 1.5rem;
+    margin: -5rem var(--gutter) 3rem;
   }
   .hero__content { padding-bottom: 6.5rem; }
   .hero__specs { display: none; }
-  .trane-badge { padding: .5rem 1rem .5rem .5rem; width: fit-content; }
-  .trane-badge__logo { width: 84px; height: 38px; }
-  .trane-badge__logo img { width: 68px; }
+  .trane-badge { padding: .625rem 1.125rem .625rem .625rem; width: fit-content; gap: 1rem; }
+  .trane-badge__logo { width: 124px; height: 56px; }
+  .trane-badge__logo img { width: 102px; }
+  .trane-badge__text { font-size: var(--fs-sm); }
+  .hero-brands__list { gap: .5rem 1.25rem; }
+  .hero-brands__list li:nth-child(1) img, .hero-brands__list li:nth-child(3) img { height: 22px; }
+  .hero-brands__list li:nth-child(2) img { height: 13px; }
 }
 @media (max-width: 479px) {
   .hero__ctas .btn { flex: 1 1 100%; }
 }
 
 @media (min-width: 1024px) {
-  .hero__bottom { max-width: calc(100% - 380px); }
+  .hero__bottom { max-width: calc(100% - 480px); }
   .hero__content { padding-bottom: clamp(9rem, 20vh, 12rem); }
   .hero__aside { display: block; }
   .hero__scroll { display: inline-flex; }
@@ -653,6 +671,7 @@ body.menu-open .site-header::before { opacity: 0; }
   font-variant-numeric: tabular-nums;
 }
 .stat__prefix { color: var(--air); margin-right: .04em; }
+.stat__suffix { color: var(--air); margin-left: .04em; font-size: .6em; vertical-align: .55em; }
 .stat__note { order: 2; font-size: var(--fs-sm); color: rgba(255, 255, 255, .6); max-width: 24ch; }
 @media (min-width: 1024px) {
   .stats__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -1062,6 +1081,14 @@ body.menu-open .site-header::before { opacity: 0; }
   font-weight: 500;
 }
 .trane__points .mono { color: var(--trane-red); }
+.brands { width: 100%; }
+.brands__label { font-size: var(--fs-xs, .75rem); color: var(--slate); }
+.brands__list { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2.25rem; margin-top: .9rem; }
+.brands__list img { width: auto; filter: brightness(0); opacity: .55; transition: opacity .3s; }
+.brands__list li:hover img { opacity: .85; }
+.brands__list li:nth-child(1) img { height: 30px; }
+.brands__list li:nth-child(2) img { height: 17px; }
+.brands__list li:nth-child(3) img { height: 30px; }
 
 /* =========================================================
    POR QUÉ DELTA

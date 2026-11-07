@@ -470,7 +470,7 @@
           if (window.gtag) window.gtag('event', 'generate_lead', { form: 'contacto' });
         })
         .catch(function () {
-          status.innerHTML = 'No pudimos enviar el mensaje. Probá de nuevo o llamanos al <a href="tel:+59521391204">021 391 204</a>.';
+          status.innerHTML = 'No pudimos enviar el mensaje. Probá de nuevo o llamanos al <a href="tel:+595981409748">0981 409 748</a>.';
           status.classList.add('is-error');
         })
         .then(function () { btn.disabled = false; });

@@ -1,6 +1,6 @@
 # Delta Montajes — rediseño de deltamontajes.com
 
-Empresa paraguaya de ingeniería electromecánica (+30 años): instalación, mantenimiento y reparación de aire acondicionado, ventilación mecánica y refrigeración industrial. Representante / partner oficial de **Trane**. Reemplaza el sitio actual en Wix.
+Empresa paraguaya de ingeniería electromecánica (+30 años): instalación, mantenimiento y reparación de aire acondicionado, ventilación mecánica y refrigeración industrial. Representante oficial de **Trane** (el dueño pidió "representantes", no "distribuidores" ni "partner") y distribuidor oficial de Midea, Goodweather y Airway. Reemplaza el sitio actual en Wix.
 
 ## Stack
 - HTML + CSS + JS vanilla, sin build. Deploy en GitHub Pages (`.nojekyll`).
@@ -24,7 +24,7 @@ assets/logos        20 logos de clientes
 - Quiénes somos: ingeniería electromecánica, capital y profesionales nacionales e internacionales, cobertura nacional, representantes de TRANE y distribuidores de marcas reconocidas. Repuestos originales.
 - Servicios: Instalación, Mantenimiento (servicio técnico de todas las marcas, planes preventivo/correctivo), Reparación (técnicos nacionales e internacionales en todo el país).
 - Diferenciales: Experiencia (specs técnicas y comerciales de cada producto) · Accesibilidad (cobertura en todo Paraguay).
-- Contacto (actualizado 2026-11-05 con la presentación): 14 de Mayo 842 · +595 21 391-204/5 · cel./WhatsApp +595 981 409 748 · administracion@deltamontajes.com (principal en header, footer, schema y form; delta@conexion.com.py queda como segunda línea en el bloque de contacto) · facebook.com/deltasrlmontajes
+- Contacto (2026-11-07: el dueño pidió un solo teléfono, el fijo 021 391 204/5 se sacó del sitio): 14 de Mayo 842 · teléfono/WhatsApp +595 981 409 748 · administracion@deltamontajes.com (principal en header, footer, schema y form; delta@conexion.com.py queda como segunda línea en el bloque de contacto) · facebook.com/deltasrlmontajes
 - Horario: Lun–Vie 7:30–12:00 / 13:00–17:30 · Sáb 8:00–11:30
 
 ### Presentación oficial (PDF "Presentacion Delta S.R.L. 12-09-26", recibida 2026-11)
@@ -55,8 +55,8 @@ Fuente de las capacidades en TR, sistemas y ubicaciones corregidas abajo. Agrega
 | Edificio Bali V | Split | edificio-bali-v |
 
 ### Equipos
-- Climatización: split pared, cassette, piso techo, baja silueta, multisplit, VRF, rooftop
-- Agua fría: chiller tornillo, chiller scroll, chiller modular, manejadoras
+- Climatización: split pared, split inverter Trane (CL-02, R32 A++ WiFi 12.000–24.000 BTU/h), cassette, piso techo, baja silueta, multisplit, VRF, rooftop
+- Chillers (pestaña renombrada de "Agua fría" a pedido del dueño): chiller tornillo, chiller scroll, chiller modular, manejadoras
 - Ventilación y conductos: conductos chapa galvanizada, conductos Alupir, conducto textil, rejas Trox, ventiladores centrífugos, ventiladores axiales
 
 ### Clientes (20, todos identificados)
@@ -88,6 +88,9 @@ hero → `#cifras` (contadores) → clientes (marquee 2 filas) → `#servicios` 
 - Deploy (2026-11-06): Hostinger, sitio PHP/HTML `deltamontajes.com`, integración GitHub (rama main → public_html). `.htaccess`: bloquea CLAUDE.md, redirige deltamontajes.com → www solo con HTTPS activo (el http→https lo hace "Forzar HTTPS" de Hostinger), caché y gzip. LIVE desde 2026-11-06: DNS sigue en Wix (no se pudo desvincular el dominio del sitio Wix: lo paga una tarjeta del cliente), A @ → 185.213.81.230, CNAME www → deltamontajes.com, MX Google Workspace y TXT sin tocar. SSL Let's Encrypt (Lifetime SSL de Hostinger) y http→https ya activos.
 - Preview local: `npx serve delta-montajes -l 5077` (config `delta-montajes` en ../.claude/launch.json). Repo: github.com/ivanmaldonado05-cmd/deltamontajes (main → Hostinger; GitHub Pages pendiente de desactivar).
 
+## Cambios del dueño (2026-11-07)
+Cifras: +30 años · +50 obras (corporativas, hoteles, hospitales y residenciales) · +150 clientes (bancos, constructoras, desarrolladoras, hoteles, comercios e instituciones) · 100 % cobertura nacional (17 departamentos). Hero: título "…climatización y ventilación mecánica para obras que no pueden fallar", specs Desde 1992 / Todo Paraguay / Chiller · VRF · Split, badge Trane agrandado + fila "También distribuidores oficiales de" con logos blancos (assets/img/brand/{midea,goodweather,airway}-logo.webp; en la sección Trane los mismos logos con `filter: brightness(0)`). Foto de Por qué Delta: equipo-recorrida-nave. Mantenimiento: preventivo a medida / correctivo todas las marcas / repuestos originales y de marcas reconocidas.
+
 ## Pendientes con el cliente
 - [ ] Confirmar que +595 981 409 748 tiene WhatsApp (ya está en botón flotante, footer y bloque de contacto) y si delta@conexion.com.py sigue activo
 - [ ] Endpoint Formspree (placeholder)
@@ -96,7 +99,7 @@ hero → `#cifras` (contadores) → clientes (marquee 2 filas) → `#servicios` 
 - [ ] Ubicación de cada obra: asumidas sin confirmar Asunción (SND, DOT, Boggiani, Ibis, MADES); Toyotoshi (Mcal. López) y Dazzler (CDE) salen de la presentación; CDE, Caazapá y San Lorenzo salen del nombre; el resto figura como "Paraguay" (`ubicacionConfirmada:false` en obras-data.js)
 - [ ] Fotos en mejor resolución: varias obras son ≤ 660 px (IPS CDE, Boggiani, Divina Tower, Ágora, Toyotoshi San Lorenzo) y muchas son renders, no fotos reales de la instalación
 - [ ] Fotos reales de equipos instalados (las actuales son imágenes de catálogo con fondo blanco)
-- [ ] Cifras reales para los contadores: hoy +20 obras y +20 clientes (lo que muestra el Wix) y 17 departamentos de cobertura
+- (resuelto 2026-11-07) Cifras de los contadores, confirmadas por el dueño
 - [ ] Descripciones de obras: redactadas a partir del sistema, tipo de edificio y TR; validar con el cliente
 - (resuelto 2026-11-05) Sistema de SND = rooftop 360 TR; fotos de Palacio de Justicia CDE/Caazapá confirmadas (la naranja tiene el cartel de CDE)
 - [ ] Más fotos por obra para la galería del modal (hoy 1 por obra, 2 en SND)
