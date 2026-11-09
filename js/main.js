@@ -454,7 +454,7 @@
       var endpoint = form.getAttribute('action');
       if (/TU_ID_FORMSPREE/.test(endpoint)) {
         // [PENDIENTE] sin endpoint real: avisar y ofrecer el mail
-        status.innerHTML = 'El formulario todavía no está conectado. Escribinos a <a href="mailto:administracion@deltamontajes.com">administracion@deltamontajes.com</a>.';
+        status.innerHTML = 'El formulario todavía no está conectado. Escribinos a <a href="mailto:administracion@deltamontajes.com.py">administracion@deltamontajes.com.py</a>.';
         status.classList.add('is-error');
         return;
       }
@@ -470,7 +470,7 @@
           if (window.gtag) window.gtag('event', 'generate_lead', { form: 'contacto' });
         })
         .catch(function () {
-          status.innerHTML = 'No pudimos enviar el mensaje. Probá de nuevo o llamanos al <a href="tel:+595981409748">0981 409 748</a>.';
+          status.innerHTML = 'No pudimos enviar el mensaje. Probá de nuevo o llamanos al <a href="tel:+595981409748">+595 981 409 748</a>.';
           status.classList.add('is-error');
         })
         .then(function () { btn.disabled = false; });

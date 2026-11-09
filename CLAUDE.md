@@ -24,7 +24,7 @@ assets/logos        20 logos de clientes
 - Quiénes somos: ingeniería electromecánica, capital y profesionales nacionales e internacionales, cobertura nacional, representantes de TRANE y distribuidores de marcas reconocidas. Repuestos originales.
 - Servicios: Instalación, Mantenimiento (servicio técnico de todas las marcas, planes preventivo/correctivo), Reparación (técnicos nacionales e internacionales en todo el país).
 - Diferenciales: Experiencia (specs técnicas y comerciales de cada producto) · Accesibilidad (cobertura en todo Paraguay).
-- Contacto (2026-11-07: el dueño pidió un solo teléfono, el fijo 021 391 204/5 se sacó del sitio): 14 de Mayo 842 · teléfono/WhatsApp +595 981 409 748 · administracion@deltamontajes.com (principal en header, footer, schema y form; delta@conexion.com.py queda como segunda línea en el bloque de contacto) · facebook.com/deltasrlmontajes
+- Contacto (2026-11-07: el dueño pidió un solo teléfono, el fijo 021 391 204/5 se sacó del sitio): 14 de Mayo 842 · teléfono/WhatsApp +595 981 409 748 · administracion@deltamontajes.com.py (principal en header, footer, schema y form; delta@conexion.com.py queda como segunda línea en el bloque de contacto) · facebook.com/deltasrlmontajes
 - Horario: Lun–Vie 7:30–12:00 / 13:00–17:30 · Sáb 8:00–11:30
 
 ### Presentación oficial (PDF "Presentacion Delta S.R.L. 12-09-26", recibida 2026-11)
@@ -76,7 +76,7 @@ hero → `#cifras` (contadores) → clientes (marquee 2 filas) → `#servicios` 
 - **Regla anti "página en blanco":** el contenido solo se oculta para animarlo cuando JS confirmó GSAP (clase `reveal-on`). Los reveals se disparan al entrar, salir o volver, y un barrido revela lo que ya quedó arriba si la página abre scrolleada (recarga, atrás, `#ancla`). El hero tiene fallback a 2,5 s. No volver a usar `once: true` solo con `onEnter`.
 - En `start()` el pin de obras se crea ANTES que los demás ScrollTrigger (los de abajo miden con el espacio del pin).
 - Header: transparente sobre el hero, se compacta (84→64 px) pasados 40 px, se oculta bajando. Menú mobile < 1024 px con focus trap y Escape.
-- Hero: slideshow de 3 fotos de campo, split-text por líneas, badge Trane + specs. Entre 1024 y 1279 px los CTAs van debajo del texto.
+- Hero: slideshow de 3 fotos de campo, split-text por líneas, badge Trane + specs. Entre 1024 y 1535 px los CTAs van debajo del texto.
 - Obras destacadas: ≥1024 px pin + translateX con scrub; < 1024 px scroll-snap nativo. Las fotos se precargan 1200 px antes (con transform el lazy-load nativo no las ve).
 - Capacidad: campo `tr` en obras-data.js; se muestra como "1.600 TR · Agua fría" en las tarjetas (home y obras.html) y en la fila "Capacidad" del modal (oculta si no hay dato). Filtro "Sistema rooftop" agregado por SND. Las tarjetas se sincronizaron con un script one-off desde obras-data.js.
 - obras.html: masonry con CSS grid (`grid-auto-rows: 8px` + `data-span` por atributo, no inline: Flip limpia los estilos inline). Deep link `obras.html#slug` abre el modal (las tarjetas de la home lo usan).
@@ -89,7 +89,7 @@ hero → `#cifras` (contadores) → clientes (marquee 2 filas) → `#servicios` 
 - Preview local: `npx serve delta-montajes -l 5077` (config `delta-montajes` en ../.claude/launch.json). Repo: github.com/ivanmaldonado05-cmd/deltamontajes (main → Hostinger; GitHub Pages pendiente de desactivar).
 
 ## Cambios del dueño (2026-11-07)
-Cifras: +30 años · +50 obras (corporativas, hoteles, hospitales y residenciales) · +150 clientes (bancos, constructoras, desarrolladoras, hoteles, comercios e instituciones) · 100 % cobertura nacional (17 departamentos). Hero: título "…climatización y ventilación mecánica para obras que no pueden fallar", specs Desde 1992 / Todo Paraguay / Chiller · VRF · Split, badge Trane agrandado + fila "También distribuidores oficiales de" con logos blancos (assets/img/brand/{midea,goodweather,airway}-logo.webp; en la sección Trane los mismos logos con `filter: brightness(0)`). Foto de Por qué Delta: equipo-recorrida-nave. Mantenimiento: preventivo a medida / correctivo todas las marcas / repuestos originales y de marcas reconocidas.
+Cifras: +30 años · +50 obras (corporativas, hoteles, hospitales y residenciales) · +150 clientes (bancos, constructoras, desarrolladoras, hoteles, comercios e instituciones) · 100 % cobertura nacional (17 departamentos). Hero: título "…climatización y ventilación mecánica para obras que no pueden fallar", specs Desde 1992 / Todo Paraguay / Agua fría · VRF · Split · Multisplit, badge Trane agrandado + fila "También distribuidores de" con logos blancos (assets/img/brand/{midea,goodweather,airway}-logo.webp; en la sección Trane los mismos logos con `filter: brightness(0)`). Foto de Por qué Delta: equipo-recorrida-nave. Mantenimiento: preventivo a medida / correctivo todas las marcas / repuestos originales y de marcas reconocidas.
 
 ## Pendientes con el cliente
 - [ ] Confirmar que +595 981 409 748 tiene WhatsApp (ya está en botón flotante, footer y bloque de contacto) y si delta@conexion.com.py sigue activo

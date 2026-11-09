@@ -546,12 +546,12 @@ body.menu-open .site-header::before { opacity: 0; }
 }
 
 @media (min-width: 1024px) {
-  .hero__bottom { max-width: calc(100% - 480px); }
+  .hero__bottom { max-width: calc(100% - 530px); }
   .hero__content { padding-bottom: clamp(9rem, 20vh, 12rem); }
   .hero__aside { display: block; }
   .hero__scroll { display: inline-flex; }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1536px) {
   .hero__bottom {
     max-width: none;
     grid-template-columns: minmax(0, 46ch) auto;
