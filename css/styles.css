@@ -1339,6 +1339,23 @@ html.reveal-on .steps__line span { transform: scaleY(0); }
 }
 .site-footer__social svg { width: 18px; height: 18px; fill: currentColor; }
 .site-footer__social a:hover { border-color: var(--air); background: rgba(95, 212, 244, .08); color: var(--white); }
+
+/* íconos de redes en contacto (fondo claro) y menú mobile (fondo oscuro) */
+.social-links { display: flex; gap: .5rem; }
+.contact__data .social-links { margin-top: .15rem; }
+.social-links a {
+  display: grid; place-items: center;
+  width: 40px; height: 40px;
+  border: 1px solid var(--line); border-radius: 50%;
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color .3s, background-color .3s, color .3s;
+}
+.social-links svg { width: 17px; height: 17px; fill: currentColor; }
+.social-links a:hover { border-color: var(--cobalt); color: var(--cobalt); }
+.social-links--dark { margin-top: 1.25rem; }
+.social-links--dark a { border-color: rgba(255, 255, 255, .2); color: rgba(255, 255, 255, .85); }
+.social-links--dark a:hover { border-color: var(--air); color: var(--white); background: rgba(95, 212, 244, .08); }
 .site-footer__bottom {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem;
   padding-block: 1.5rem;

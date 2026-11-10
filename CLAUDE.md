@@ -24,7 +24,7 @@ assets/logos        20 logos de clientes
 - Quiénes somos: ingeniería electromecánica, capital y profesionales nacionales e internacionales, cobertura nacional, representantes de TRANE y distribuidores de marcas reconocidas. Repuestos originales.
 - Servicios: Instalación, Mantenimiento (servicio técnico de todas las marcas, planes preventivo/correctivo), Reparación (técnicos nacionales e internacionales en todo el país).
 - Diferenciales: Experiencia (specs técnicas y comerciales de cada producto) · Accesibilidad (cobertura en todo Paraguay).
-- Contacto (2026-11-07: el dueño pidió un solo teléfono, el fijo 021 391 204/5 se sacó del sitio): 14 de Mayo 842 · teléfono/WhatsApp +595 981 409 748 · administracion@deltamontajes.com.py (principal en header, footer, schema y form; delta@conexion.com.py queda como segunda línea en el bloque de contacto) · facebook.com/deltasrlmontajes
+- Contacto (2026-11-07: el dueño pidió un solo teléfono, el fijo 021 391 204/5 se sacó del sitio): 14 de Mayo 842 · teléfono/WhatsApp +595 981 409 748 · administracion@deltamontajes.com.py (principal en header, footer, schema y form; delta@conexion.com.py queda como segunda línea en el bloque de contacto) · Facebook facebook.com/profile.php?id=61596276937389 · Instagram @deltamontajes.py · TikTok @delta.montajes.py (2026-11-10; el Facebook viejo deltasrlmontajes se reemplazó)
 - Horario: Lun–Vie 7:30–12:00 / 13:00–17:30 · Sáb 8:00–11:30
 
 ### Presentación oficial (PDF "Presentacion Delta S.R.L. 12-09-26", recibida 2026-11)
@@ -107,4 +107,4 @@ Cifras: +30 años · +50 obras (corporativas, hoteles, hospitales y residenciale
 - [ ] TR de las obras que la presentación no informa: Toyotoshi, Dazzler, DOT, MADES, Genoa, Divina Tower, Finesse, TOCSA, Bali V
 - [ ] Obras de la presentación que no están en el sitio (faltan fotos): Royal Plaza 280 TR, Ventura San Vicente 200 TR, HONDA Asunción 180 TR, Margareta 200 TR, María Antonia 220 TR, Palacio de Justicia Cap. Bado 80 TR, Liga Encarnacena, Hospitales de Contingencia, Ball Corporation 300 TR, Aqua Village (VRV), Shopping Los Jardines 300 TR agua fría, Centro Acuático Olímpico (VRV + agua fría), Cooperativa Universitaria (VRV), More Mariscal y Fibonacci (multi-split), Tienda ACE 240 TR rooftop, SND Polideportivo Tenis de mesa 120 TR rooftop
 - [ ] Clientes del PDF que no están en el marquee: Conempa, González Acosta & Wood, Gómez Abente Constructora, Ball Corporation
-- [ ] Instagram / LinkedIn si existen (hoy solo Facebook)
+- (resuelto 2026-11-10) Redes: Facebook nuevo, Instagram y TikTok en footer, contacto, menú mobile y schema
